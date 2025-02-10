@@ -1,11 +1,14 @@
 {
-  "name": "@korhq/ui",
+  "name": "@korhq/ui-workspace",
   "version": "0.0.0",
-  "description": "KOR UI",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "pnpm run --filter @korhq/ui-preview",
+    "ui": "pnpm run --filter @korhq/ui"
   },
   "author": "dukc",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
 }
