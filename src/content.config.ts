@@ -1,9 +1,12 @@
+import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
 import { PreviewSchema } from "@korhq/unpreview";
-import { glob } from "astro/loaders";
 
 const previews = defineCollection({
-  loader: glob({ pattern: "**/*.{json,mdx}", base: "./src/previews" }),
+  loader: glob({
+    pattern: "**/*.{md,mdx,json}",
+    base: "src/previews",
+  }),
   schema: PreviewSchema,
 });
 

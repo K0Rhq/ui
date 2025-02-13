@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit Variable", sans-serif;
+  --font-mono: "Chivo Mono Variable", monospace;
+
+  --text-display: 4.5rem;
+  --text-h1: 2.5rem;
+  --text-h2: 2rem;
+  --text-h3: 1.5rem;
+  --text-hmono: 1.25rem;
+  --text-h4: 1.125rem;
+  --text-mono: 0.875rem;
+  --text-body: 0.875rem;
+  --text-subtext: 0.75rem;
+}
