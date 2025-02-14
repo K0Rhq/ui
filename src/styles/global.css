@@ -13,4 +13,79 @@
   --text-mono: 0.875rem;
   --text-body: 0.875rem;
   --text-subtext: 0.75rem;
+
+  --color-\*: initial;
+  --color-white: ccc;
+  --color-black: oklch(0% 0 0);
+
+  /* -------------- Light mode specific colors -------------- */
+  --color-text: oklch(17.76% 0 0);
+  --color-text-solid: oklch(0% 0 0);
+  --color-text-reversed: oklch(97.02% 0 0);
+  --color-text-reversed-solid: oklch(100% 0 0);
+  /* Colors */
+  --color-accent: oklch(65.99% 0.144754 237.3109);
+  --color-red: oklch(49.14% 0.201664 29.2339);
+  --color-orange: oklch(57.16% 0.1383 50.5);
+  --color-yellow: oklch(69.29% 0.1427 96.59);
+  --color-green: oklch(62.61% 0.1952 144.25);
+  --color-blue: oklch(65.99% 0.144754 237.3109);
+  --color-purple: oklch(41.3% 0.2205 277.09);
+  /* Materials */
+  --color-bg: oklch(97.31% 0 0);
+  --color-stroke-1: linear-gradient(
+    180deg,
+    oklch(0% 0 0 / 6%) 0%,
+    oklch(0% 0 0 / 11%) 100%
+  );
+  --color-stroke-2: linear-gradient(
+    180deg,
+    oklch(0% 0 0 / 3%) 0%,
+    oklch(0% 0 0 / 10%) 100%
+  );
+  --color-fg-1: linear-gradient(
+    180deg,
+    oklch(100% 0.5 50 / 92%) 0%,
+    oklch(100% 0 0 / 87%) 100%
+  );
+  --color-fg-2: linear-gradient(
+    180deg,
+    oklch(87.92% 0 0 / 30%) 0%,
+    oklch(87.92% 0 0 / 44%) 100%
+  );
+  --color-fg-2-accent: linear-gradient(
+    180deg,
+    oklch(69.61% 0.1332 233.02 / 50%) 0%,
+    oklch(69.61% 0.1332 233.02 / 33%) 100%
+  );
+  --color-fg-2-red: linear-gradient(
+    180deg,
+    oklch(66.87% 0.218478 25.3456 / 30%) 0%,
+    oklch(66.87% 0.218478 25.3456 / 44%) 100%
+  );
+  --color-fg-2-orange: linear-gradient(
+    180deg,
+    oklch(70.09% 0.201198 44.7666 / 30%) 0%,
+    oklch(70.09% 0.201198 44.7666 / 44%) 100%
+  );
+  --color-fg-2-yellow: linear-gradient(
+    180deg,
+    oklch(89.07% 0.1833 96.19 / 30%) 0%,
+    oklch(89.07% 0.1833 96.19 / 44%) 100%
+  );
+  --color-fg-2-green: linear-gradient(
+    180deg,
+    oklch(79.68% 0.2421 144.54 / 30%) 0%,
+    oklch(79.68% 0.2421 144.54 / 44%) 100%
+  );
+  --color-fg-2-blue: linear-gradient(
+    180deg,
+    oklch(69.61% 0.1332 233.02 / 30%) 0%,
+    oklch(69.61% 0.1332 233.02 / 44%) 100%
+  );
+  --color-fg-2-purple: linear-gradient(
+    180deg,
+    oklch(46.53% 0.2543 276.8 / 30%) 0%,
+    oklch(46.53% 0.2543 276.8 / 44%) 100%
+  );
 }
