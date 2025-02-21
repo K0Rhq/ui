@@ -34,39 +34,32 @@
   /* Materials */
   --color-bg: oklch(97.31% 0 0);
   --background-image-fg-2-accent: linear-gradient(
-    180deg,
-    oklch(69.61% 0.1332 233.02 / 50%) 0%,
-    oklch(69.61% 0.1332 233.02 / 33%) 100%
+    oklch(69.61% 0.1332 233.02 / 50%),
+    oklch(69.61% 0.1332 233.02 / 33%)
   );
   --background-image-fg-2-red: linear-gradient(
-    180deg,
-    oklch(66.87% 0.218478 25.3456 / 30%) 0%,
-    oklch(66.87% 0.218478 25.3456 / 44%) 100%
+    oklch(66.87% 0.218478 25.3456 / 30%),
+    oklch(66.87% 0.218478 25.3456 / 44%)
   );
   --background-image-fg-2-orange: linear-gradient(
-    180deg,
-    oklch(70.09% 0.201198 44.7666 / 30%) 0%,
-    oklch(70.09% 0.201198 44.7666 / 44%) 100%
+    oklch(70.09% 0.201198 44.7666 / 30%),
+    oklch(70.09% 0.201198 44.7666 / 44%)
   );
   --background-image-fg-2-yellow: linear-gradient(
-    180deg,
-    oklch(89.07% 0.1833 96.19 / 30%) 0%,
-    oklch(89.07% 0.1833 96.19 / 44%) 100%
+    oklch(89.07% 0.1833 96.19 / 30%),
+    oklch(89.07% 0.1833 96.19 / 44%)
   );
   --background-image-fg-2-green: linear-gradient(
-    180deg,
-    oklch(79.68% 0.2421 144.54 / 30%) 0%,
-    oklch(79.68% 0.2421 144.54 / 44%) 100%
+    oklch(79.68% 0.2421 144.54 / 30%),
+    oklch(79.68% 0.2421 144.54 / 44%)
   );
   --background-image-fg-2-blue: linear-gradient(
-    180deg,
-    oklch(69.61% 0.1332 233.02 / 30%) 0%,
-    oklch(69.61% 0.1332 233.02 / 44%) 100%
+    oklch(69.61% 0.1332 233.02 / 30%),
+    oklch(69.61% 0.1332 233.02 / 44%)
   );
   --background-image-fg-2-purple: linear-gradient(
-    180deg,
-    oklch(46.53% 0.2543 276.8 / 30%) 0%,
-    oklch(46.53% 0.2543 276.8 / 44%) 100%
+    oklch(46.53% 0.2543 276.8 / 30%),
+    oklch(46.53% 0.2543 276.8 / 44%)
   );
 }
 
