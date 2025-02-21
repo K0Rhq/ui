@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Outfit Variable", sans-serif;
   --font-mono: "Chivo Mono Variable", monospace;
@@ -33,6 +35,13 @@
   --color-purple: oklch(41.3% 0.2205 277.09);
   /* Materials */
   --color-bg: oklch(97.31% 0 0);
+  --color-stroke-1: oklch(0% 0 0 /8.5%);
+  --color-stroke-2: oklch(0% 0 0 /11.5%);
+  --background-image-fg-1: linear-gradient(
+    oklch(100% 0 0 / 92%),
+    oklch(100% 0 0 / 87%)
+  );
+  --background-image-fg-2: oklch(0% 0 0 / 6.5%);
   --background-image-fg-2-accent: linear-gradient(
     oklch(69.61% 0.1332 233.02 / 50%),
     oklch(69.61% 0.1332 233.02 / 33%)
@@ -61,36 +70,6 @@
     oklch(46.53% 0.2543 276.8 / 30%),
     oklch(46.53% 0.2543 276.8 / 44%)
   );
-}
-
-@utility fg-1 {
-  border: 1px solid transparent;
-  background-image:
-    linear-gradient(oklch(100% 0 0 / 92%), oklch(100% 0 0 / 87%)),
-    linear-gradient(oklch(0% 0 0 / 6%), oklch(0% 0 0 / 11%));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-@utility fg-2 {
-  border: 1px solid transparent;
-  background-image:
-    linear-gradient(oklch(87.92% 0 0 / 30%), oklch(87.92% 0 0 / 44%)),
-    linear-gradient(oklch(0% 0 0 / 3%), oklch(0% 0 0 / 10%));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-@utility fg-2-accent {
-  border: 1px solid transparent;
-  background-image:
-    linear-gradient(
-      oklch(69.61% 0.1332 233.02 / 50%),
-      oklch(69.61% 0.1332 233.02 / 33%)
-    ),
-    linear-gradient(oklch(0% 0 0 / 3%), oklch(0% 0 0 / 10%));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
 }
 
 button,
