@@ -1,5 +1,3 @@
-<button
-  class="bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
->
+<button class="fg-1 rounded-xl px-8 py-2">
   <slot />
 </button>
