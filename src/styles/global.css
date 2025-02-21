@@ -17,7 +17,7 @@
   --text-subtext: 0.75rem;
 
   --color-\*: initial;
-  --color-white: ccc;
+  --color-white: oklch(100% 0 0);
   --color-black: oklch(0% 0 0);
 
   /* -------------- Light mode specific colors -------------- */
