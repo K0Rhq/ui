@@ -42,36 +42,36 @@
     oklch(100% 0 0 / 87%)
   );
   --background-image-fg-2: linear-gradient(
-    oklch(87.92% 0 0 / 18%),
-    oklch(87.92% 0 0 / 25%)
+    oklch(72.05% 0 0 / 18%),
+    oklch(72.05% 0 0 / 25%)
   );
   --background-image-fg-2-accent: linear-gradient(
-    oklch(87.92% 0.1332 233.02 / 18%),
-    oklch(87.92% 0.1332 233.02 / 25%)
+    oklch(72.05% 0.1332 233.02 / 18%),
+    oklch(72.05% 0.1332 233.02 / 25%)
   );
   --background-image-fg-2-red: linear-gradient(
-    oklch(87.92% 0.218478 25.3456 / 18%),
-    oklch(87.92% 0.218478 25.3456 / 25%)
+    oklch(72.05% 0.1735 25.3456 / 18%),
+    oklch(72.05% 0.1735 25.3456 / 25%)
   );
   --background-image-fg-2-orange: linear-gradient(
-    oklch(87.92% 0.201198 44.7666 / 18%),
-    oklch(87.92% 0.201198 44.7666 / 25%)
+    oklch(72.05% 0.1839 44.7666 / 18%),
+    oklch(72.05% 0.1839 44.7666 / 25%)
   );
   --background-image-fg-2-yellow: linear-gradient(
-    oklch(87.92% 0.1833 96.19 / 18%),
-    oklch(87.92% 0.1833 96.19 / 25%)
+    oklch(72.05% 0.1479 96.19 / 18%),
+    oklch(72.05% 0.1479 96.19 / 25%)
   );
   --background-image-fg-2-green: linear-gradient(
-    oklch(87.92% 0.2421 144.54 / 18%),
-    oklch(87.92% 0.2421 144.54 / 25%)
+    oklch(72.05% 0.2296 144.54 / 18%),
+    oklch(72.05% 0.2296 144.54 / 25%)
   );
   --background-image-fg-2-blue: linear-gradient(
-    oklch(87.92% 0.1332 233.02 / 18%),
-    oklch(87.92% 0.1332 233.02 / 25%)
+    oklch(72.05% 0.1332 233.02 / 18%),
+    oklch(72.05% 0.1332 233.02 / 25%)
   );
   --background-image-fg-2-purple: linear-gradient(
-    oklch(87.92% 0.2543 276.8 / 18%),
-    oklch(87.92% 0.2543 276.8 / 25%)
+    oklch(72.05% 0.1458 276.8 / 18%),
+    oklch(72.05% 0.1458 276.8 / 25%)
   );
 }
 
@@ -115,12 +115,12 @@
     oklch(26.45% 0.0633 53.08 / 33%)
   );
   --background-image-fg-2-yellow: linear-gradient(
-    oklch(26.45% 0.0672 98.56 / 50%),
-    oklch(26.45% 0.063953 99.1788 / 33%)
+    oklch(26.45% 0.0544 98.56 / 50%),
+    oklch(26.45% 0.0544 99.1788 / 33%)
   );
   --background-image-fg-2-green: linear-gradient(
-    oklch(26.45% 0.083 145.24 / 50%),
-    oklch(26.45% 0.0765 145.34 / 33%)
+    oklch(26.45% 0.0816 145.24 / 50%),
+    oklch(26.45% 0.0816 145.34 / 33%)
   );
   --background-image-fg-2-blue: linear-gradient(
     oklch(26.45% 0.0454 230.49 / 50%),
