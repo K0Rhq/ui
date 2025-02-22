@@ -42,8 +42,8 @@
     oklch(100% 0 0 / 87%)
   );
   --background-image-fg-2: linear-gradient(
-    oklch(72.05% 0 0 / 18%),
-    oklch(72.05% 0 0 / 25%)
+    oklch(85% 0 0 / 18%),
+    oklch(85% 0 0 / 25%)
   );
   --background-image-fg-2-accent: linear-gradient(
     oklch(72.05% 0.1332 233.02 / 18%),
