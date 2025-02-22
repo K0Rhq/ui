@@ -3,7 +3,7 @@ title: Materials
 ---
 
 BG 1
-<div class="font-mono text-hmono bg-fg-1 border border-stroke-1 p-8 flex flex-col gap-2 rounded-xl">
+<div class="font-mono text-hmono w-[50vw] bg-fg-1 border border-stroke-1 p-8 flex flex-col gap-2 rounded-xl">
   FG 1
   <div class="font-mono text-hmono bg-fg-2 border border-stroke-2 px-8 py-4 rounded-xl">
     FG 2

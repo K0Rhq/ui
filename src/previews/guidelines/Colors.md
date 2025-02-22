@@ -2,7 +2,7 @@
 title: Colors
 ---
 
-<div class="font-mono text-text-reversed text-hmono bg-fg-1 border border-stroke-1 p-8 flex flex-col gap-2 rounded-xl">
+<div class="font-mono w-[50vw] text-text-reversed text-hmono bg-fg-1 border border-stroke-1 p-8 flex flex-col gap-2 rounded-xl">
   <div class="font-mono text-hmono bg-accent border border-stroke-2 px-8 py-4 rounded-xl">
     ACCENT
   </div>

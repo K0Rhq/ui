@@ -27,10 +27,10 @@
   --color-text-reversed-solid: oklch(100% 0 0);
   /* Colors */
   --color-accent: oklch(65% 0.1425 237.3109);
-  --color-red: oklch(65% 0.201664 29.2339);
-  --color-orange: oklch(65% 0.1383 50.5);
-  --color-yellow: oklch(65% 0.1338 96.59);
-  --color-green: oklch(65% 0.1952 144.25);
+  --color-red: oklch(61.5% 0.201664 29.2339);
+  --color-orange: oklch(67% 0.1383 50.5);
+  --color-yellow: oklch(70% 0.1338 96.59);
+  --color-green: oklch(67% 0.1952 144.25);
   --color-blue: oklch(65% 0.1425 237.3109);
   --color-purple: oklch(65% 0.1098 277.09);
   /* Materials */
@@ -84,9 +84,9 @@
   /* Colors */
   --color-accent: oklch(70% 0.146 236.17);
   --color-red: oklch(70% 0.1904 25.3456);
-  --color-orange: oklch(71% 0.1555 53.51);
-  --color-yellow: oklch(76% 0.1436 96.19);
-  --color-green: oklch(72% 0.223 144.54);
+  --color-orange: oklch(74% 0.1555 53.51);
+  --color-yellow: oklch(79% 0.1436 96.19);
+  --color-green: oklch(74% 0.223 144.54);
   --color-blue: oklch(70% 0.146 236.17);
   --color-purple: oklch(70% 0.1614 287.6806);
 
