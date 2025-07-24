@@ -3,8 +3,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans: "Outfit Variable", sans-serif;
-    --font-mono: "Chivo Mono Variable", monospace;
+    --font-sans: "Outfit Variable", "Outfit", system-ui, sans-serif;
+    --font-mono:
+        "Chivo Mono Variable", "Chivo Mono", ui-monospace, SFMono-Regular,
+        monospace;
+    --font-serif: "Wittgenstein Variable", "Wittgenstein", Georgia, serif;
 
     --text-display: 4.5rem;
     --text-h1: 2.5rem;

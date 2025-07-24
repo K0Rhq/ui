@@ -1,4 +1,13 @@
 import "./preview.css";
+import "@fontsource/outfit/300.css";
+import "@fontsource/outfit/500.css";
+import "@fontsource/outfit/600.css";
+import "@fontsource/outfit/700.css";
+import "@fontsource/outfit/900.css";
+import "@fontsource/chivo-mono";
+import "@fontsource/wittgenstein/400.css";
+import "@fontsource/wittgenstein/600.css";
+import "@fontsource/wittgenstein/700.css";
 import type { Preview } from "@storybook/svelte-vite";
 import CenterDecorator from "./CenterDecorator.svelte";
 
@@ -28,17 +37,31 @@ const preview: Preview = {
         dynamicTitle: true,
       },
     },
+    font: {
+      description: "Global font family for components",
+      defaultValue: "sans",
+      toolbar: {
+        title: "Font",
+        icon: "typography",
+        items: [
+          { value: "sans", title: "Sans Serif" },
+          { value: "serif", title: "Serif" },
+        ],
+        dynamicTitle: true,
+      },
+    },
   },
   decorators: [
     // Center content decorator
     () => CenterDecorator,
-    // Dark mode decorator
+    // Theme and font decorator
     (story, context) => {
       const theme = context.globals.theme || "light";
+      const font = context.globals.font || "sans";
 
-      // Apply theme to the document body and Storybook containers
+      // Apply theme and font to the document body and Storybook containers
       if (typeof document !== "undefined") {
-        const applyTheme = () => {
+        const applyStyles = () => {
           const body = document.body;
           const html = document.documentElement;
           const storybookRoot = document.getElementById("storybook-root");
@@ -60,6 +83,8 @@ const preview: Preview = {
           for (const el of elements) {
             el?.classList.add("h-full");
           }
+
+          // Apply theme classes
           if (theme === "dark") {
             for (const el of elements) {
               el?.classList.add("dark");
@@ -69,13 +94,19 @@ const preview: Preview = {
               el?.classList.remove("dark");
             }
           }
+
+          // Apply font classes
+          for (const el of elements) {
+            el?.classList.remove("font-sans", "font-serif");
+            el?.classList.add(`font-${font}`);
+          }
         };
 
         // Apply immediately
-        applyTheme();
+        applyStyles();
 
         // Apply again after a short delay to catch dynamically created elements
-        setTimeout(applyTheme, 50);
+        setTimeout(applyStyles, 50);
       }
 
       return story();

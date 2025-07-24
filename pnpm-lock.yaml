@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/chivo-mono':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource/outfit':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource/wittgenstein':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@tailwindcss/vite':
         specifier: ^4.1.11
         version: 4.1.11(vite@7.0.6(@types/node@24.1.0)(jiti@2.5.1)(lightningcss@1.30.1))
@@ -272,6 +281,15 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/chivo-mono@5.2.6':
+    resolution: {integrity: sha512-fs0bzPlzpatWrnEtEbXt49p5Jvb1SO6JMz+om8C6ImYLA7QUe4iF8Yt3cVWB4yNNIHPj9h3ylql05gXOScyiJw==}
+
+  '@fontsource/outfit@5.2.6':
+    resolution: {integrity: sha512-fXkIBhYAFJ2VU+PcPd/xi4vCdXHUaGMgSlJ0KCXcwEHqayMwzoExuoharIVgnae9wd5/QtcepFKXtmabsqIoEQ==}
+
+  '@fontsource/wittgenstein@5.2.6':
+    resolution: {integrity: sha512-ea/j+4/pWmf6xn8aFqRlxKLQ3sKs02nV07wdZzJDPc/EU6g6b3U4VJSTrr6Z6UL6Ha4mveDJrm2NhaMbdAEj8w==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1657,6 +1675,12 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.8':
     optional: true
+
+  '@fontsource/chivo-mono@5.2.6': {}
+
+  '@fontsource/outfit@5.2.6': {}
+
+  '@fontsource/wittgenstein@5.2.6': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
