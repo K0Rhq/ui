@@ -4,19 +4,16 @@
 
 :root {
     --current-bg: var(--color-white);
-    --current-text: var(--color-black);
 }
 
 :root.dark,
 .dark {
     --current-bg: var(--color-gray-950);
-    --current-text: var(--color-gray-50);
 }
 
 /* Global styles */
 body {
     background-color: var(--current-bg);
-    color: var(--current-text);
 }
 
 /* Storybook specific containers */
@@ -26,8 +23,6 @@ body {
 .sb-story,
 .sb-story > div,
 .docs-story,
-.sbdocs-wrapper,
-.sbdocs-content,
 #storybook-preview-iframe,
 body[data-storybook] {
     background-color: var(--current-bg) !important;
@@ -41,10 +36,4 @@ body[data-storybook] {
 .sb-show-main.sb-main-padded > div,
 .sb-show-main.sb-main-padded > div > div {
     background: transparent !important;
-}
-
-/* Storybook docs page background */
-.sbdocs.sbdocs-wrapper {
-    background-color: var(--current-bg) !important;
-    color: var(--current-text) !important;
 }
