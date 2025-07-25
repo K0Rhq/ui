@@ -3,12 +3,12 @@
 /* Dynamic theme properties */
 
 :root {
-    --current-bg: var(--color-white);
+    --current-bg: var(--color-accent-50);
 }
 
 :root.dark,
 .dark {
-    --current-bg: var(--color-gray-950);
+    --current-bg: var(--color-accent-950);
 }
 
 /* Global styles */
@@ -26,7 +26,6 @@ body {
 #storybook-preview-iframe,
 body[data-storybook] {
     background-color: var(--current-bg) !important;
-    color: var(--current-text) !important;
     transition:
         background-color 0.2s ease,
         color 0.2s ease;

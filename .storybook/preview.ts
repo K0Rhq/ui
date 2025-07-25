@@ -29,10 +29,10 @@ const preview: Preview = {
       defaultValue: "light",
       toolbar: {
         title: "Theme",
-        icon: "circlehollow",
+        icon: "sun",
         items: [
-          { value: "light", icon: "circlehollow", title: "Light" },
-          { value: "dark", icon: "circle", title: "Dark" },
+          { value: "light", icon: "sun", title: "Light" },
+          { value: "dark", icon: "moon", title: "Dark" },
         ],
         dynamicTitle: true,
       },
@@ -42,10 +42,23 @@ const preview: Preview = {
       defaultValue: "sans",
       toolbar: {
         title: "Font",
-        icon: "typography",
+        icon: "markup",
         items: [
-          { value: "sans", title: "Sans Serif" },
+          { value: "sans", title: "Sans" },
           { value: "serif", title: "Serif" },
+        ],
+        dynamicTitle: true,
+      },
+    },
+    flat: {
+      description: "Global visual style for components",
+      defaultValue: "enhanced",
+      toolbar: {
+        title: "Style",
+        icon: "component",
+        items: [
+          { value: "enhanced", title: "Enhanced" },
+          { value: "flat", title: "Flat" },
         ],
         dynamicTitle: true,
       },
@@ -58,6 +71,7 @@ const preview: Preview = {
     (story, context) => {
       const theme = context.globals.theme || "light";
       const font = context.globals.font || "sans";
+      const flat = context.globals.flat || "enhanced";
 
       // Apply theme and font to the document body and Storybook containers
       if (typeof document !== "undefined") {
@@ -99,6 +113,17 @@ const preview: Preview = {
           for (const el of elements) {
             el?.classList.remove("font-sans", "font-serif");
             el?.classList.add(`font-${font}`);
+          }
+
+          // Apply flat classes
+          if (flat === "flat") {
+            for (const el of elements) {
+              el?.classList.add("flat");
+            }
+          } else {
+            for (const el of elements) {
+              el?.classList.remove("flat");
+            }
           }
         };
 

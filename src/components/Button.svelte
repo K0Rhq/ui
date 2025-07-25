@@ -29,9 +29,9 @@
                         "bg-gray-200 text-gray-900 hover:bg-gray-300 active:bg-gray-400 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:active:bg-gray-500",
                 },
                 size: {
-                    small: "h-8 px-3 text-sm",
-                    medium: "h-10 px-4 text-base",
-                    large: "h-12 px-6 text-lg",
+                    small: "h-8 px-3 body",
+                    medium: "h-10 px-4 body",
+                    large: "h-12 px-6 body",
                 },
             },
             defaultVariants: {
