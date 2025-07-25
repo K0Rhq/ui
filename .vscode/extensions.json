@@ -1,4 +1,4 @@
 {
   "recommendations": ["svelte.svelte-vscode"],
-  "tailwindCSS.classFunctions": ["cva", "cx"]
+  "tailwindCSS.classFunctions": ["cva", "cx", "tv"]
 }
