@@ -13,6 +13,6 @@
 <Separator
     bind:ref
     data-slot="select-separator"
-    class={cn("bg-stroke pointer-events-none h-px", className)}
+    class={cn("pointer-events-none h-px", className)}
     {...restProps}
 />

@@ -1,7 +1,7 @@
 <script module>
     import { defineMeta } from "@storybook/addon-svelte-csf";
-    import * as Select from "$lib/components/ui/select/index.js";
-    import { Root } from "$lib/components/ui/select/index.js";
+    import * as Select from "$lib/components/ui/select/index.ts";
+    import { Root } from "$lib/components/ui/select/index.ts";
     import { fn } from "storybook/test";
 
     const sampleItems = [
