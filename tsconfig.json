@@ -22,7 +22,9 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["src/*"],
+      "$lib": ["./src/lib"],
+      "$lib/*": ["./src/lib/*"]
     }
   },
   "include": [
@@ -32,10 +34,5 @@
     "src/**/*.svelte",
     "src/**/*.json"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "storybook-static"
-  ]
+  "exclude": ["node_modules", "dist", "build", "storybook-static"]
 }
