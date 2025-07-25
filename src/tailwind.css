@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-motion";
+
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant flat (&:where(.flat, .flat *));
 
@@ -191,7 +193,7 @@
     @apply text-subtitle font-normal tracking-tight leading-none;
 }
 .font-serif .body {
-    @apply text-body;
+    @apply text-body pt-1;
 }
 .font-serif .caption {
     @apply text-body font-light;

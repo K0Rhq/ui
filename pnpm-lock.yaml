@@ -32,6 +32,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
+      tailwindcss-motion:
+        specifier: ^1.1.1
+        version: 1.1.1(tailwindcss@4.1.11)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^4.0.1
@@ -69,6 +72,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.4(@vitest/browser@3.2.4)(vitest@3.2.4)
+      phosphor-icons-svelte:
+        specifier: ^2.0.9
+        version: 2.0.9(svelte@5.36.16)
       playwright:
         specifier: ^1.54.1
         version: 1.54.1
@@ -1244,6 +1250,11 @@ packages:
     resolution: {integrity: sha512-//nshmD55c46FuFw26xV/xFAaB5HF9Xdap7HJBBnrKdAd6/GxDBaNA1870O79+9ueg61cZLSVc+OaFlfmObYVQ==}
     engines: {node: '>= 14.16'}
 
+  phosphor-icons-svelte@2.0.9:
+    resolution: {integrity: sha512-iNmOpe8c6iFvqZp1NH1KNoHYRAOOhnBQ6yrGH+pZucoNnMKbD/MCmR2sPNvbteLvX41UtuezVFAd5eMaC/9wmg==}
+    peerDependencies:
+      svelte: '>= 5'
+
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -1438,6 +1449,11 @@ packages:
     engines: {node: '>=16.x', pnpm: '>=7.x'}
     peerDependencies:
       tailwindcss: '*'
+
+  tailwindcss-motion@1.1.1:
+    resolution: {integrity: sha512-CeeQAc5o31BuEPMyWdq/786X7QWNeifa+8khfu74Fs8lGkgEwjNYv6dGv+lRFS8FWXV5dp7F3AU9JjBXjiaQfw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
 
   tailwindcss@4.1.11:
     resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
@@ -2632,6 +2648,10 @@ snapshots:
 
   pathval@2.0.1: {}
 
+  phosphor-icons-svelte@2.0.9(svelte@5.36.16):
+    dependencies:
+      svelte: 5.36.16
+
   picocolors@1.1.1: {}
 
   picomatch@4.0.3: {}
@@ -2863,6 +2883,10 @@ snapshots:
   tailwind-variants@1.0.0(tailwindcss@4.1.11):
     dependencies:
       tailwind-merge: 3.0.2
+      tailwindcss: 4.1.11
+
+  tailwindcss-motion@1.1.1(tailwindcss@4.1.11):
+    dependencies:
       tailwindcss: 4.1.11
 
   tailwindcss@4.1.11: {}

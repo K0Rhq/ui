@@ -5,14 +5,46 @@
     import { fn } from "storybook/test";
 
     const sampleItems = [
-        { value: "apple", label: "Apple" },
-        { value: "banana", label: "Banana" },
-        { value: "cherry", label: "Cherry" },
-        { value: "date", label: "Date" },
-        { value: "elderberry", label: "Elderberry", disabled: true },
-        { value: "fig", label: "Fig" },
-        { value: "grape", label: "Grape" },
-        { value: "honeydew", label: "Honeydew" },
+        {
+            heading: "Fruits",
+            items: [
+                { value: "apple", label: "Apple" },
+                { value: "banana", label: "Banana" },
+                { value: "cherry", label: "Cherry" },
+                { value: "orange", label: "Orange" },
+                { value: "grape", label: "Grape" },
+            ],
+        },
+        {
+            heading: "Vegetables",
+            items: [
+                { value: "carrot", label: "Carrot" },
+                { value: "broccoli", label: "Broccoli" },
+                { value: "spinach", label: "Spinach" },
+                { value: "potato", label: "Potato", disabled: true },
+                { value: "onion", label: "Onion" },
+            ],
+        },
+        {
+            heading: "Grains",
+            items: [
+                { value: "rice", label: "Rice" },
+                { value: "wheat", label: "Wheat" },
+                { value: "oats", label: "Oats" },
+                { value: "quinoa", label: "Quinoa" },
+                { value: "barley", label: "Barley" },
+            ],
+        },
+        {
+            heading: "Proteins",
+            items: [
+                { value: "chicken", label: "Chicken" },
+                { value: "beef", label: "Beef" },
+                { value: "fish", label: "Fish" },
+                { value: "tofu", label: "Tofu" },
+                { value: "eggs", label: "Eggs" },
+            ],
+        },
     ];
 
     const { Story } = defineMeta({
@@ -30,16 +62,21 @@
             },
             size: {
                 control: { type: "select" },
-                options: ["small", "medium", "large"],
+                options: ["sm", "default"],
+            },
+            side: {
+                control: { type: "select" },
+                options: ["top", "bottom", "left", "right"],
             },
             onValueChange: { action: "valueChanged" },
         },
         args: {
             items: sampleItems,
-            placeholder: "Select a fruit...",
+            placeholder: "Select food...",
             disabled: false,
             type: "single",
-            size: "medium",
+            size: "default",
+            side: "bottom",
             value: "",
             onValueChange: fn(),
         },
@@ -47,18 +84,38 @@
 </script>
 
 {#snippet template(args)}
-    <Select.Root bind:value={args.value} type={args.type}>
-        <Select.Trigger class="w-[180px]" disabled={args.disabled}>
-            {args.value
-                ? args.items.find((item) => item.value === args.value)?.label
-                : args.placeholder}
+    <Select.Root
+        bind:value={args.value}
+        type={args.type}
+        disabled={args.disabled}
+        onValueChange={args.onValueChange}
+    >
+        <Select.Trigger class="w-32" size={args.size}>
+            {#if args.value}
+                {args.items
+                    .flatMap((group) => group.items)
+                    .find((item) => item.value === args.value)?.label}
+            {:else}
+                {args.placeholder}
+            {/if}
         </Select.Trigger>
 
-        <Select.Content>
-            {#each args.items as item}
-                <Select.Item value={item.value} disabled={item.disabled}>
-                    {item.label}
-                </Select.Item>
+        <Select.Content side={args.side}>
+            {#each args.items as group, groupIndex}
+                <Select.Group>
+                    <Select.GroupHeading>{group.heading}</Select.GroupHeading>
+                    {#each group.items as item}
+                        <Select.Item
+                            value={item.value}
+                            disabled={item.disabled}
+                        >
+                            {item.label}
+                        </Select.Item>
+                    {/each}
+                </Select.Group>
+                {#if groupIndex < args.items.length - 1}
+                    <Select.Separator />
+                {/if}
             {/each}
         </Select.Content>
     </Select.Root>

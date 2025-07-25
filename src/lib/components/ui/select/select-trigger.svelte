@@ -1,7 +1,8 @@
 <script lang="ts">
     import { Select as SelectPrimitive } from "bits-ui";
-    import ChevronDownIcon from "@lucide/svelte/icons/chevron-down";
+    import IconCaretUpDown from "phosphor-icons-svelte/IconCaretUpDownRegular.svelte";
     import { cn, type WithoutChild } from "~/lib/utils.js";
+    import { cva } from "class-variance-authority";
 
     let {
         ref = $bindable(null),
@@ -12,15 +13,32 @@
     }: WithoutChild<SelectPrimitive.TriggerProps> & {
         size?: "sm" | "default";
     } = $props();
+
+    const triggerVariants = cva(
+        "bg-surface-primary border border-stroke leading-0 text-text flex items-center gap-2 justify-between shadow-glass",
+        {
+            variants: {
+                size: {
+                    default: "h-10 px-3 rounded-2xl",
+                    sm: "h-7 px-2 rounded-8",
+                },
+            },
+            defaultVariants: {
+                size: "default",
+            },
+        },
+    );
 </script>
 
 <SelectPrimitive.Trigger
     bind:ref
     data-slot="select-trigger"
     data-size={size}
-    class={cn("bg-surface-primary", className)}
+    class={cn(triggerVariants({ size }), className)}
     {...restProps}
 >
-    {@render children?.()}
-    <ChevronDownIcon class="size-4 opacity-50" />
+    <span class="body truncate flex-1 min-w-0 h-full min-h-0 flex items-center">
+        {@render children?.()}
+    </span>
+    <IconCaretUpDown class="size-4 min-w-4 min-h-4" />
 </SelectPrimitive.Trigger>
