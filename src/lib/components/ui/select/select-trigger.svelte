@@ -15,7 +15,7 @@
     } = $props();
 
     const triggerVariants = cva(
-        "bg-surface-primary border border-stroke leading-0 text-text flex items-center gap-2 justify-between shadow-glass",
+        "bg-surface-primary border border-stroke text-text flex items-center gap-2 justify-between shadow-glass",
         {
             variants: {
                 size: {
@@ -37,7 +37,7 @@
     class={cn(triggerVariants({ size }), className)}
     {...restProps}
 >
-    <span class="body truncate flex-1 min-w-0 h-full min-h-0 flex items-center">
+    <span class="body truncate flex-1 min-w-0 leading-none py-2 text-left">
         {@render children?.()}
     </span>
     <IconCaretUpDown class="size-4 min-w-4 min-h-4" />

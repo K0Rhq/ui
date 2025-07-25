@@ -92,9 +92,18 @@
     >
         <Select.Trigger class="w-32" size={args.size}>
             {#if args.value}
-                {args.items
-                    .flatMap((group) => group.items)
-                    .find((item) => item.value === args.value)?.label}
+                {@const allItems = args.items.flatMap((group) => group.items)}
+                {@const selectedItems = Array.isArray(args.value)
+                    ? allItems.filter((item) => args.value.includes(item.value))
+                    : allItems.filter((item) => item.value === args.value)}
+                {@const selectedLabels = selectedItems.map(
+                    (item) => item.label,
+                )}
+                {#if selectedLabels.length > 3}
+                    {selectedLabels.length} selected
+                {:else}
+                    {selectedLabels.join(", ")}
+                {/if}
             {:else}
                 {args.placeholder}
             {/if}
