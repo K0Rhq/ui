@@ -26,7 +26,7 @@ const preview: Preview = {
   globalTypes: {
     theme: {
       description: "Global theme for components",
-      defaultValue: "light",
+      defaultValue: "dark",
       toolbar: {
         title: "Theme",
         icon: "sun",
@@ -50,14 +50,14 @@ const preview: Preview = {
         dynamicTitle: true,
       },
     },
-    flat: {
+    style: {
       description: "Global visual style for components",
-      defaultValue: "enhanced",
+      defaultValue: "rich",
       toolbar: {
         title: "Style",
-        icon: "component",
+        icon: "paintbrush",
         items: [
-          { value: "enhanced", title: "Enhanced" },
+          { value: "rich", title: "Rich" },
           { value: "flat", title: "Flat" },
         ],
         dynamicTitle: true,
@@ -69,9 +69,9 @@ const preview: Preview = {
     () => CenterDecorator,
     // Theme and font decorator
     (story, context) => {
-      const theme = context.globals.theme || "light";
+      const theme = context.globals.theme || "dark";
       const font = context.globals.font || "sans";
-      const flat = context.globals.flat || "enhanced";
+      const flat = context.globals.style || "rich";
 
       // Apply theme and font to the document body and Storybook containers
       if (typeof document !== "undefined") {
@@ -115,7 +115,7 @@ const preview: Preview = {
             el?.classList.add(`font-${font}`);
           }
 
-          // Apply flat classes
+          // Apply style classes
           if (flat === "flat") {
             for (const el of elements) {
               el?.classList.add("flat");

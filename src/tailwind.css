@@ -232,6 +232,7 @@ code {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    border-radius: inherit;
     box-shadow:
         0 0 2px -37px rgba(255, 255, 255, 0.5) inset,
         0 2px 6.1px 0 rgba(255, 255, 255, 0.1) inset;
@@ -243,6 +244,7 @@ code {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    border-radius: inherit;
     box-shadow:
         0 -4px 4px 0 rgba(0, 0, 0, 0.02) inset,
         0 -1px 2px 0 rgba(0, 0, 0, 0.15) inset;
@@ -266,6 +268,7 @@ code {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    border-radius: inherit;
     box-shadow: 0 3px 2px 0 rgba(255, 255, 255, 0.2) inset;
     mix-blend-mode: plus-lighter;
 }
@@ -275,6 +278,7 @@ code {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    border-radius: inherit;
     box-shadow: 0 7px 3.9px 0 rgba(255, 255, 255, 0.25) inset;
     mix-blend-mode: overlay;
 }
