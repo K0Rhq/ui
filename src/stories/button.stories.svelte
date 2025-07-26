@@ -72,3 +72,8 @@
     args={{ size: "icon" }}
     template={templateIcon}
 />
+
+{#snippet templateInvalid(args)}
+    <Button {...args} aria-invalid>{args.label}</Button>
+{/snippet}
+<Story name="Invalid" let:args template={templateInvalid} />

@@ -308,3 +308,36 @@ button:disabled,
 a:disabled {
     cursor: not-allowed;
 }
+
+/* Focus ring for solid buttons with skeuo shadows */
+.focus-ring-solid:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text) / 50%);
+}
+
+.focus-ring-solid-success:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text-success) / 50%);
+}
+
+.focus-ring-solid-warning:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text-warning) / 50%);
+}
+
+.focus-ring-solid-danger:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text-danger) / 50%);
+}

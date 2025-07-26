@@ -8,9 +8,9 @@
 
     export const buttonVariants = tv({
         base: [
-            "inline-flex shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-full body outline-none transition-all focus-visible:ring-[3px]",
-            "hover:brightness-110 active:brightness-95 hover:pb-1 active:pt-2 duration-200 transform-[filter]",
-            "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-text-danger/30 aria-invalid:border-text-danger",
+            "inline-flex shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-full body outline-none transition-all",
+            "hover:brightness-110 active:brightness-95 active:pt-1 duration-200 transform-[filter]",
+            "aria-invalid:ring-[2px] aria-invalid:ring-text-danger/30 aria-invalid:border aria-invalid:border-text-danger",
             "disabled:pointer-events-none aria-disabled:cursor-not-allowed disabled:opacity-35 disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:opacity-35",
             "[&_svg:not([class*='size-'])]:size-4.5 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         ],
@@ -29,8 +29,8 @@
             size: {
                 default: "h-10 px-3.5",
                 sm: "h-7 px-2.5",
-                icon: "size-10",
-                "icon-sm": "size-7",
+                icon: "size-10 [&_svg:not([class*='size-'])]:size-5.5",
+                "icon-sm": "size-7 [&_svg:not([class*='size-'])]:size-4.5",
             },
         },
         compoundVariants: [
@@ -38,64 +38,64 @@
             {
                 variant: "primary",
                 appearance: "solid",
-                class: "bg-surface-component text-text-invert shadow-skeuo",
+                class: "bg-surface-component text-text-invert shadow-skeuo focus-ring-solid",
             },
             {
                 variant: "success",
                 appearance: "solid",
-                class: "bg-surface-component-success text-text-success-invert shadow-skeuo",
+                class: "bg-surface-component-success text-text-success-invert shadow-skeuo focus-ring-solid-success",
             },
             {
                 variant: "warning",
                 appearance: "solid",
-                class: "bg-surface-component-warning text-text-warning-invert shadow-skeuo",
+                class: "bg-surface-component-warning text-text-warning-invert shadow-skeuo focus-ring-solid-warning",
             },
             {
                 variant: "danger",
                 appearance: "solid",
-                class: "bg-surface-component-danger text-text-danger-invert shadow-skeuo",
+                class: "bg-surface-component-danger text-text-danger-invert shadow-skeuo focus-ring-solid-danger",
             },
             // Soft
             {
                 variant: "primary",
                 appearance: "soft",
-                class: "bg-surface-primary text-text shadow-glass border border-stroke",
+                class: "bg-surface-primary text-text shadow-glass border border-stroke focus-visible:ring-[2px] focus-visible:ring-text/50",
             },
             {
                 variant: "success",
                 appearance: "soft",
-                class: "bg-surface-primary-success text-text-success shadow-glass border border-stroke",
+                class: "bg-surface-primary-success text-text-success shadow-glass border border-stroke focus-visible:ring-[2px] focus-visible:ring-text-success/50",
             },
             {
                 variant: "warning",
                 appearance: "soft",
-                class: "bg-surface-primary-warning text-text-warning shadow-glass border border-stroke",
+                class: "bg-surface-primary-warning text-text-warning shadow-glass border border-stroke focus-visible:ring-[2px] focus-visible:ring-text-warning/50",
             },
             {
                 variant: "danger",
                 appearance: "soft",
-                class: "bg-surface-primary-danger text-text-danger shadow-glass border border-stroke",
+                class: "bg-surface-primary-danger text-text-danger shadow-glass border border-stroke focus-visible:ring-[2px] focus-visible:ring-text-danger/50",
             },
             // Ghost
             {
                 variant: "primary",
                 appearance: "ghost",
-                class: "bg-transparent hover:bg-surface-primary text-text hover:shadow-glass",
+                class: "bg-transparent hover:bg-surface-primary text-text hover:shadow-glass focus-visible:ring-[2px] focus-visible:ring-text/25",
             },
             {
                 variant: "success",
                 appearance: "ghost",
-                class: "bg-transparent hover:bg-surface-primary-success text-text-success hover:shadow-glass",
+                class: "bg-transparent hover:bg-surface-primary-success text-text-success hover:shadow-glass focus-visible:ring-[2px] focus-visible:ring-text-success/25",
             },
             {
                 variant: "warning",
                 appearance: "ghost",
-                class: "bg-transparent hover:bg-surface-primary-warning text-text-warning hover:shadow-glass",
+                class: "bg-transparent hover:bg-surface-primary-warning text-text-warning hover:shadow-glass focus-visible:ring-[2px] focus-visible:ring-text-warning/25",
             },
             {
                 variant: "danger",
                 appearance: "ghost",
-                class: "bg-transparent hover:bg-surface-primary-danger text-text-danger hover:shadow-glass",
+                class: "bg-transparent hover:bg-surface-primary-danger text-text-danger hover:shadow-glass focus-visible:ring-[2px] focus-visible:ring-text-danger/25",
             },
         ],
         defaultVariants: {
