@@ -17,7 +17,7 @@
     const triggerVariants = cva(
         [
             "bg-surface-primary border border-stroke text-text flex items-center gap-2 justify-between shadow-glass",
-            "hover:brightness-110 active:brightness-95 active:pt-1 serif:active:pt-2 duration-200 transform-[filter]",
+            "hover:brightness-110 active:brightness-95 duration-200 transform-[filter]",
         ],
         {
             variants: {

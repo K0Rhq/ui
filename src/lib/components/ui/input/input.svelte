@@ -45,6 +45,9 @@
             size: "default",
         },
     });
+
+    const padding = size === "sm" ? "pt-0.5" : "pt-2";
+    const radii = size === "sm" ? "rounded-8" : "rounded-12";
 </script>
 
 {#if type === "file"}
@@ -53,7 +56,8 @@
         data-slot="input"
         class={cn(
             inputVariants({ size: inputSize }),
-            (inputSize === "sm" ? "pt-1" : "pt-2") + " cursor-pointer",
+            padding,
+            "cursor-pointer",
             className,
         )}
         type="file"
@@ -62,7 +66,7 @@
         {...restProps}
     />
 {:else}
-    <span class="shadow-glass">
+    <span class={cn("shadow-glass", radii)}>
         <input
             bind:this={ref}
             data-slot="input"
