@@ -33,7 +33,7 @@
         <SelectScrollUpButton />
         <SelectPrimitive.Viewport
             class={cn(
-                "h-(--bits-select-anchor-height) min-w-(--bits-select-anchor-width) w-full scroll-my-1 p-3 flex flex-col gap-2",
+                "h-(--bits-select-anchor-height) min-w-(--bits-select-anchor-width) w-full scroll-my-1 p-1 flex flex-col gap-0",
             )}
         >
             {@render children?.()}

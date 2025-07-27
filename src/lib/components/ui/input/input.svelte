@@ -30,8 +30,8 @@
 
     const inputVariants = tv({
         base: [
-            "bg-surface-primary body placeholder:text-text/50 text-text shadow-glass border-stroke ring-offset-background flex w-full min-w-0 border outline-none transition-colors",
-            "focus-visible:border-text/25 focus-visible:ring-text/15 focus-visible:ring-[2px]",
+            "bg-surface-primary body placeholder:text-text/50 text-text shadow-glass border-stroke flex w-full min-w-0 border transition-colors",
+            "focus-visible:border-text/25 focus-visible:ring-text/15 focus-visible:ring-[2px] ring-offset-background outline-none",
             "aria-invalid:ring-text-danger/20 dark:aria-invalid:ring-text-danger/40 aria-invalid:border-text-danger",
             "disabled:cursor-not-allowed disabled:opacity-50",
         ],

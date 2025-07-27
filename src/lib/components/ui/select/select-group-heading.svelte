@@ -14,7 +14,7 @@
 <SelectPrimitive.GroupHeading
     bind:ref
     data-slot="select-group-heading"
-    class={cn("subtext text-text/60 cursor-default", className)}
+    class={cn("subtext text-text/60 cursor-default mx-2 my-1", className)}
     {...restProps}
 >
     {@render children?.()}
