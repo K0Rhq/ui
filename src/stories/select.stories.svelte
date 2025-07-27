@@ -72,7 +72,7 @@
         },
         args: {
             items: sampleItems,
-            placeholder: "Select food...",
+            placeholder: "Select food",
             disabled: false,
             type: "single",
             size: "default",

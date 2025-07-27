@@ -4,6 +4,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant flat (&:where(.flat, .flat *));
+@custom-variant sans (&:where(.font-sans, .font-sans *));
+@custom-variant serif (&:where(.font-serif, .font-serif *));
 
 @theme {
     --font-sans: "Outfit Variable", "Outfit", system-ui, sans-serif;
@@ -144,62 +146,65 @@
 }
 
 /* Sans text styles */
-.font-sans .display {
-    @apply text-display font-black tracking-tight leading-none;
-}
-.font-sans .large-title {
-    @apply text-large-title font-semibold tracking-tight leading-none;
-}
-.font-sans .title-1 {
-    @apply text-title-1 font-medium tracking-normal leading-none;
-}
-.font-sans .title-2 {
-    @apply text-title-2 font-medium tracking-normal leading-none;
-}
-.font-sans .title-3 {
-    @apply text-title-3 font-medium tracking-normal leading-none;
-}
-.font-sans .subtitle {
-    @apply text-subtitle font-medium tracking-normal leading-none;
-}
-.font-sans .body {
-    @apply text-body font-light;
-}
-.font-sans .caption {
-    @apply text-body font-light;
-}
-.font-sans .subtext {
-    @apply text-sub font-light;
+@variant sans {
+    .display {
+        @apply text-display font-black tracking-tight leading-none;
+    }
+    .large-title {
+        @apply text-large-title font-semibold tracking-tight leading-none;
+    }
+    .title-1 {
+        @apply text-title-1 font-medium tracking-normal leading-none;
+    }
+    .title-2 {
+        @apply text-title-2 font-medium tracking-normal leading-none;
+    }
+    .title-3 {
+        @apply text-title-3 font-medium tracking-normal leading-none;
+    }
+    .subtitle {
+        @apply text-subtitle font-medium tracking-normal leading-none;
+    }
+    .body {
+        @apply text-body font-light;
+    }
+    .caption {
+        @apply text-body font-light;
+    }
+    .subtext {
+        @apply text-sub font-light;
+    }
 }
 
 /* Serif text styles */
-
-.font-serif .display {
-    @apply text-display font-normal tracking-tight leading-none;
-}
-.font-serif .large-title {
-    @apply text-large-title font-normal tracking-tight leading-none;
-}
-.font-serif .title-1 {
-    @apply text-title-1 font-normal tracking-tight leading-none;
-}
-.font-serif .title-2 {
-    @apply text-title-2 font-normal tracking-tight leading-none;
-}
-.font-serif .title-3 {
-    @apply text-title-3 font-normal tracking-tight leading-none;
-}
-.font-serif .subtitle {
-    @apply text-subtitle font-normal tracking-tight leading-none;
-}
-.font-serif .body {
-    @apply text-body pt-1;
-}
-.font-serif .caption {
-    @apply text-body font-light;
-}
-.font-serif .subtext {
-    @apply text-sub font-light;
+@variant serif {
+    .display {
+        @apply text-display font-normal tracking-tight leading-none;
+    }
+    .large-title {
+        @apply text-large-title font-normal tracking-tight leading-none;
+    }
+    .title-1 {
+        @apply text-title-1 font-normal tracking-tight leading-none;
+    }
+    .title-2 {
+        @apply text-title-2 font-normal tracking-tight leading-none;
+    }
+    .title-3 {
+        @apply text-title-3 font-normal tracking-tight leading-none;
+    }
+    .subtitle {
+        @apply text-subtitle font-normal tracking-tight leading-none;
+    }
+    .body {
+        @apply text-body;
+    }
+    .caption {
+        @apply text-body font-light;
+    }
+    .subtext {
+        @apply text-sub font-light;
+    }
 }
 
 /* Mono text styles */
