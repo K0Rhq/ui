@@ -35,10 +35,8 @@
         a: HTMLAnchorElement;
     };
 
-    type ListItemProps<T extends keyof ElementMap = "li"> = WithElementRef<
-        HTMLAttributes<ElementMap[T]>
-    > & {
-        as?: T;
+    type ListItemProps = WithElementRef<HTMLAttributes<HTMLElement>> & {
+        as?: keyof ElementMap;
         selected?: boolean;
         size?: ListItemVariant;
     };
@@ -46,12 +44,12 @@
     let {
         ref = $bindable(null),
         class: className,
-        as = "li",
+        as = "li" as keyof ElementMap,
         selected = false,
         size = "default",
         children,
         ...restProps
-    }: ListItemProps<typeof as> = $props();
+    }: ListItemProps = $props();
 </script>
 
 <svelte:element
