@@ -2,6 +2,7 @@
     import { defineMeta } from "@storybook/addon-svelte-csf";
     import { Button } from "$lib/components/ui/button/index.ts";
     import IconAirplane from "phosphor-icons-svelte/IconAirplaneRegular.svelte";
+    import { fn } from "storybook/test";
 
     const { Story } = defineMeta({
         title: "Components/Button",
@@ -37,6 +38,7 @@
             appearance: "solid",
             size: "default",
             disabled: false,
+            onclick: fn(),
         },
         parameters: {
             controls: {

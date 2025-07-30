@@ -5,11 +5,15 @@
         RadioGroupItem,
     } from "$lib/components/ui/radio-group/index.ts";
     import { Label } from "$lib/components/ui/label/index.ts";
+    import { fn } from "storybook/test";
 
     const { Story } = defineMeta({
         title: "Components/Radio Group",
         tags: ["autodocs"],
         component: RadioGroup,
+        args: {
+            onValueChange: fn(),
+        },
         parameters: {
             controls: {
                 include: Object.keys({}),

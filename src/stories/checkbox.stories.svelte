@@ -1,6 +1,7 @@
 <script module>
     import { defineMeta } from "@storybook/addon-svelte-csf";
     import { Checkbox } from "$lib/components/ui/checkbox/index.ts";
+    import { fn } from "storybook/test";
 
     const { Story } = defineMeta({
         title: "Components/Checkbox",
@@ -21,6 +22,7 @@
             indeterminate: false,
             disabled: false,
             checked: true,
+            onCheckedChange: fn(),
         },
         parameters: {
             controls: {
