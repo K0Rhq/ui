@@ -40,7 +40,7 @@
                     disabled: null,
                     step: null,
                     orientation: null,
-                    direction: null,
+                    dir: null,
                 }),
                 hideNoControlsWarning: true,
             },
