@@ -1,6 +1,8 @@
-# KorUI
+![Banner](/.github/assets/github.png)
 
-KorUI is a smart, modern, not-boring new design system and UI kit, built for Svelte 5.
+# KOR UI
+
+KOR UI is a smart, modern, not-boring new design system and UI kit, built for Svelte 5.
 
 ### Design language
 
@@ -12,3 +14,5 @@ This design language builds on the traditional semantic and flat color token des
 ### Components
 
 This component package is build with [`shadcn/svelte`](https://www.shadcn-svelte.com), which itself is mainly built on [Bits UI](https://bits-ui.com) and other various component primitives. Then the components are packaged up again and distributed via npm.
+
+You would think packaging it again would defeat the point of shadcn but we're really just using shadcn/svelte as a starter template for the components, we would like to own the components of our design system, thanks.
