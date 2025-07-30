@@ -17,7 +17,7 @@
     bind:ref
     data-slot="checkbox"
     class={cn(
-        "border-stroke bg-surface-primary shadow-glass text-text-60 data-[state=checked]:text-text peer flex size-7 shrink-0 items-center justify-center rounded-8 border outline-none",
+        "border-stroke bg-surface-primary shadow-glass text-text-60 data-[state=checked]:text-text data-[state=indeterminate]:text-text peer flex size-7 shrink-0 items-center justify-center rounded-8 border outline-none",
         "transition-[border-color] duration-200 ease-out",
         "focus-visible:border-text/25 focus-visible:ring-text/15 focus-visible:ring-[2px] ring-offset-background outline-none",
         "aria-invalid:ring-text-danger/20 dark:aria-invalid:ring-text-danger/40 aria-invalid:border-text-danger",
@@ -33,12 +33,12 @@
             data-slot="checkbox-indicator"
             class="text-current transition-none"
         >
-            {#if checked}
-                <IconCheck
+            {#if indeterminate}
+                <IconMinus
                     class="size-5 motion-preset-fade-md motion-duration-200"
                 />
-            {:else if indeterminate}
-                <IconMinus
+            {:else if checked}
+                <IconCheck
                     class="size-5 motion-preset-fade-md motion-duration-200"
                 />
             {/if}
