@@ -27,6 +27,22 @@
     import type { HTMLAttributes } from "svelte/elements";
     import { cn, type WithElementRef } from "$lib/utils.js";
 
+    type ElementMap = {
+        li: HTMLLIElement;
+        div: HTMLDivElement;
+        button: HTMLButtonElement;
+        span: HTMLSpanElement;
+        a: HTMLAnchorElement;
+    };
+
+    type ListItemProps<T extends keyof ElementMap = "li"> = WithElementRef<
+        HTMLAttributes<ElementMap[T]>
+    > & {
+        as?: T;
+        selected?: boolean;
+        size?: ListItemVariant;
+    };
+
     let {
         ref = $bindable(null),
         class: className,
@@ -35,11 +51,7 @@
         size = "default",
         children,
         ...restProps
-    }: WithElementRef<HTMLAttributes<HTMLDivElement>> & {
-        as?: string;
-        selected?: boolean;
-        size?: ListItemVariant;
-    } = $props();
+    }: ListItemProps<typeof as> = $props();
 </script>
 
 <svelte:element

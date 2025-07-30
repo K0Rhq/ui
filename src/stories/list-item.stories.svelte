@@ -12,14 +12,22 @@
             size: {
                 control: { type: "select", options: ["sm", "default"] },
             },
+            as: {
+                control: {
+                    type: "select",
+                },
+                options: ["li", "div", "span", "a"],
+            },
         },
         args: {
             size: "default",
+            as: "li",
         },
         parameters: {
             controls: {
                 include: Object.keys({
                     size: null,
+                    as: null,
                 }),
                 hideNoControlsWarning: true,
             },
