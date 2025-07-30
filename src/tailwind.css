@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-motion";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant flat (&:where(.flat, .flat *));
+@custom-variant sans (&:where(.font-sans, .font-sans *));
+@custom-variant serif (&:where(.font-serif, .font-serif *));
+
+@theme {
+    --font-sans: "Outfit Variable", "Outfit", system-ui, sans-serif;
+    --font-mono:
+        "Chivo Mono Variable", "Chivo Mono", ui-monospace, SFMono-Regular,
+        monospace;
+    --font-serif: "Wittgenstein Variable", "Wittgenstein", Georgia, serif;
+
+    --text-display: 4.5rem;
+    --text-large-title: 2.5rem;
+    --text-title-1: 1.875rem;
+    --text-title-2: 1.5rem;
+    --text-title-3: 1.25rem;
+    --text-subtitle: 1.0625rem;
+    --text-body: 0.9375rem;
+    --text-caption: 0.8125rem;
+    --text-sub: 0.75rem;
+
+    --radius-4: 0.25rem;
+    --radius-6: 0.375rem;
+    --radius-8: 0.5rem;
+    --radius-10: 0.625;
+    --radius-12: 0.75rem;
+    --radius-14: 0.875rem;
+    --radius-16: 1rem;
+    --radius-20: 1.25rem;
+    --radius-24: 1.5rem;
+    --radius-28: 1.75rem;
+    --radius-30: 1.875rem;
+    --radius-32: 2rem;
+    --radius-full: calc(infinity * 1px);
+
+    --blur-raised-1: 6px;
+    --blur-raised-2: 32px;
+    --blur-raised-3: 100px;
+    --blur-surface-base: 50px;
+
+    --shadow-skeuo:
+        0 2px 4px 0 rgba(0, 0, 0, 0.15),
+        0 -4px 7.5px 0 rgba(0, 0, 0, 0.33) inset;
+
+    /* Mapped accent colors, neutral is the default */
+    --color-accent-50: var(--color-neutral-50);
+    --color-accent-100: var(--color-neutral-100);
+    --color-accent-200: var(--color-neutral-200);
+    --color-accent-300: var(--color-neutral-300);
+    --color-accent-400: var(--color-neutral-400);
+    --color-accent-500: var(--color-neutral-500);
+    --color-accent-600: var(--color-neutral-600);
+    --color-accent-700: var(--color-neutral-700);
+    --color-accent-800: var(--color-neutral-800);
+    --color-accent-900: var(--color-neutral-900);
+    --color-accent-950: var(--color-neutral-950);
+
+    /* Mapped materials */
+    --color-bg: var(--color-accent-50);
+    /* Text */
+    --color-text: var(--color-accent-900);
+    --color-text-solid: var(--color-black);
+    --color-text-invert: var(--color-accent-50);
+    --color-text-solid-invert: var(--color-white);
+    --color-text-success: var(--color-green-800);
+    --color-text-warning: var(--color-yellow-800);
+    --color-text-danger: var(--color-red-800);
+    --color-text-success-contrast: var(--color-green-950);
+    --color-text-warning-contrast: var(--color-yellow-950);
+    --color-text-danger-contrast: var(--color-red-950);
+    --color-text-success-invert: var(--color-green-200);
+    --color-text-warning-invert: var(--color-yellow-200);
+    --color-text-danger-invert: var(--color-red-200);
+    /* Surface materials */
+    --color-surface-stroke: --alpha(var(--color-accent-900) / 5%);
+    --color-stroke: var(--color-surface-stroke);
+    --color-surface-base: --alpha(var(--color-accent-100) / 64%);
+    --background-image-surface-primary: linear-gradient(
+        --alpha(var(--color-accent-200) / 55%),
+        --alpha(var(--color-accent-100) / 55%)
+    );
+    --background-image-surface-primary-success: linear-gradient(
+        --alpha(var(--color-green-200) / 55%),
+        --alpha(var(--color-green-100) / 55%)
+    );
+    --background-image-surface-primary-warning: linear-gradient(
+        --alpha(var(--color-yellow-200) / 55%),
+        --alpha(var(--color-yellow-100) / 55%)
+    );
+    --background-image-surface-primary-danger: linear-gradient(
+        --alpha(var(--color-red-200) / 55%),
+        --alpha(var(--color-red-100) / 55%)
+    );
+    --color-surface-component: var(--color-accent-800);
+    --color-surface-component-success: var(--color-green-800);
+    --color-surface-component-warning: var(--color-yellow-800);
+    --color-surface-component-danger: var(--color-red-800);
+}
+
+@variant dark {
+    /* Mapped materials DARK MODE */
+    --color-bg: var(--color-accent-950);
+    /* Text */
+    --color-text: var(--color-accent-100);
+    --color-text-solid: var(--color-white);
+    --color-text-invert: var(--color-accent-900);
+    --color-text-solid-invert: var(--color-black);
+    --color-text-success: var(--color-green-400);
+    --color-text-warning: var(--color-yellow-400);
+    --color-text-danger: var(--color-red-400);
+    --color-text-success-contrast: var(--color-green-200);
+    --color-text-warning-contrast: var(--color-yellow-200);
+    --color-text-danger-contrast: var(--color-red-200);
+    --color-text-success-invert: var(--color-green-50);
+    --color-text-warning-invert: var(--color-yellow-50);
+    --color-text-danger-invert: var(--color-red-50);
+    /* Surface materials */
+    --color-surface-stroke: --alpha(var(--color-accent-100) / 5%);
+    --color-stroke: var(--color-surface-stroke);
+    --color-surface-base: --alpha(var(--color-accent-900) / 64%);
+    --background-image-surface-primary: linear-gradient(
+        --alpha(var(--color-accent-900) / 55%),
+        --alpha(var(--color-accent-800) / 55%)
+    );
+    --background-image-surface-primary-success: linear-gradient(
+        --alpha(var(--color-green-950) / 55%),
+        --alpha(var(--color-green-900) / 55%)
+    );
+    --background-image-surface-primary-warning: linear-gradient(
+        --alpha(var(--color-yellow-950) / 55%),
+        --alpha(var(--color-yellow-900) / 55%)
+    );
+    --background-image-surface-primary-danger: linear-gradient(
+        --alpha(var(--color-red-950) / 55%),
+        --alpha(var(--color-red-900) / 55%)
+    );
+    --color-surface-component: var(--color-accent-200);
+    --color-surface-component-success: var(--color-green-700);
+    --color-surface-component-warning: var(--color-yellow-700);
+    --color-surface-component-danger: var(--color-red-700);
+}
+
+/* Sans text styles */
+@variant sans {
+    .display {
+        @apply text-display font-black tracking-tight leading-none;
+    }
+    .large-title {
+        @apply text-large-title font-semibold tracking-tight leading-none;
+    }
+    .title-1 {
+        @apply text-title-1 font-medium tracking-normal leading-none;
+    }
+    .title-2 {
+        @apply text-title-2 font-medium tracking-normal leading-none;
+    }
+    .title-3 {
+        @apply text-title-3 font-medium tracking-normal leading-none;
+    }
+    .subtitle {
+        @apply text-subtitle font-medium tracking-normal leading-none;
+    }
+    .body {
+        @apply text-body font-light;
+    }
+    .caption {
+        @apply text-body font-light;
+    }
+    .subtext {
+        @apply text-sub font-light;
+    }
+}
+
+/* Serif text styles */
+@variant serif {
+    .display {
+        @apply text-display font-normal tracking-tight leading-none;
+    }
+    .large-title {
+        @apply text-large-title font-normal tracking-tight leading-none;
+    }
+    .title-1 {
+        @apply text-title-1 font-normal tracking-tight leading-none;
+    }
+    .title-2 {
+        @apply text-title-2 font-normal tracking-tight leading-none;
+    }
+    .title-3 {
+        @apply text-title-3 font-normal tracking-tight leading-none;
+    }
+    .subtitle {
+        @apply text-subtitle font-normal tracking-tight leading-none;
+    }
+    .body {
+        @apply text-body;
+    }
+    .caption {
+        @apply text-body font-light;
+    }
+    .subtext {
+        @apply text-sub font-light;
+    }
+}
+
+/* Mono text styles */
+
+.font-mono.title-1 {
+    @apply text-title-1 font-normal tracking-tight leading-none;
+}
+.font-mono.title-2 {
+    @apply text-title-2 font-normal tracking-tight leading-none;
+}
+.font-mono.title-3 {
+    @apply text-title-3 font-normal tracking-tight leading-none;
+}
+.font-mono.subtitle {
+    @apply text-subtitle font-normal tracking-tight leading-none;
+}
+.font-mono.body {
+    @apply text-body;
+}
+
+code {
+    @apply font-mono text-body;
+}
+
+/* Glass shadow with layered blend modes */
+.shadow-glass {
+    position: relative;
+}
+
+.shadow-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow:
+        0 0 2px -37px rgba(255, 255, 255, 0.5) inset,
+        0 2px 6.1px 0 rgba(255, 255, 255, 0.1) inset;
+    mix-blend-mode: plus-lighter;
+}
+
+.shadow-glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow:
+        0 -4px 4px 0 rgba(0, 0, 0, 0.02) inset,
+        0 -1px 2px 0 rgba(0, 0, 0, 0.15) inset;
+    mix-blend-mode: color-burn;
+}
+
+/* Flat variant - no shadows */
+.flat .shadow-glass::before,
+.flat .shadow-glass::after {
+    box-shadow: none;
+}
+
+/* Skeuo shadow with layered blend modes */
+.shadow-skeuo {
+    position: relative;
+    box-shadow: var(--shadow-skeuo);
+}
+
+.shadow-skeuo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow: 0 3px 2px 0 rgba(255, 255, 255, 0.2) inset;
+    mix-blend-mode: plus-lighter;
+}
+
+.shadow-skeuo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow: 0 7px 3.9px 0 rgba(255, 255, 255, 0.25) inset;
+    mix-blend-mode: overlay;
+}
+
+/* Flat variant - no shadows */
+.flat .shadow-skeuo {
+    box-shadow: none;
+}
+
+.flat .shadow-skeuo::before,
+.flat .shadow-skeuo::after {
+    box-shadow: none;
+}
+
+@theme dark {
+    --color-background: var(--color-gray-950);
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+button:disabled,
+a:disabled {
+    cursor: not-allowed;
+}
+
+/* Focus ring for solid buttons with skeuo shadows */
+.focus-ring-solid:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text) / 50%);
+}
+
+.focus-ring-solid-success:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text-success) / 50%);
+}
+
+.focus-ring-solid-warning:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text-warning) / 50%);
+}
+
+.focus-ring-solid-danger:focus-visible {
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        var(--shadow-skeuo),
+        0 0 0 3px --alpha(var(--color-text-danger) / 50%);
+}

@@ -1,0 +1,31 @@
+import { Canvas, Meta } from '@storybook/addon-docs/blocks';
+import * as TypographyStories from './typography.stories.svelte';
+
+<Meta of={TypographyStories} />
+
+# Typography
+
+We support two font styles:
+
+* `Outfit` (sans)
+* `Wittgenstein` (serif)
+
+Use sans for general interfaces. Serif is meant for reading-heavy apps like Bibleio. **Don't mix serif and sans** in the same view.
+
+**Use the toggle in the Storybook toolbar to preview both.**
+
+In code, apply `font-sans` or `font-serif` to your layout or container element.
+
+<Canvas of={TypographyStories.Typography} />
+
+
+### Mono fonts
+
+Both styles include the mono font `Chivo Mono` for code, labels, and display headings.
+
+Apply `font-mono` to any element you want to style.
+**Don’t use mono for body text or entire layouts.** It’s not a full font style. But it is also usually used with number based text.
+
+Mono headers are usually fully capitalized using `uppercase`. Keep these short and descriptive — avoid full sentences.
+
+<Canvas of={TypographyStories.Mono} />
