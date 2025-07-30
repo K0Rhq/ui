@@ -27,12 +27,16 @@
                 control: { type: "select" },
                 options: ["default", "sm", "icon", "icon-sm"],
             },
+            disabled: {
+                control: { type: "boolean" },
+            },
         },
         args: {
             label: "Button",
             variant: "primary",
             appearance: "solid",
             size: "default",
+            disabled: false,
         },
         parameters: {
             controls: {
@@ -41,6 +45,7 @@
                     variant: null,
                     appearance: null,
                     size: null,
+                    disabled: null,
                 }),
                 hideNoControlsWarning: true,
             },
