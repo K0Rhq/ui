@@ -49,17 +49,12 @@
 </script>
 
 <Story
-    name="Slider"
+    name="Single"
     args={{ type: "single", orientation: "horizontal", value: 89 }}
     let:args
 />
 <Story
     name="Range"
     args={{ type: "multiple", orientation: "horizontal", value: [24, 89] }}
-    let:args
-/>
-<Story
-    name="Vertical"
-    args={{ type: "single", orientation: "vertical" }}
     let:args
 />

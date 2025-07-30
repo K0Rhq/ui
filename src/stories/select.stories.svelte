@@ -90,7 +90,11 @@
         disabled={args.disabled}
         onValueChange={args.onValueChange}
     >
-        <Select.Trigger class="w-32" size={args.size}>
+        <Select.Trigger
+            class="w-32"
+            size={args.size}
+            aria-invalid={args["aria-invalid"]}
+        >
             {#if args.value}
                 {@const allItems = args.items.flatMap((group) => group.items)}
                 {@const selectedItems = Array.isArray(args.value)
@@ -131,3 +135,5 @@
 {/snippet}
 
 <Story name="Select" let:args {template} />
+
+<Story name="Invalid" args={{ "aria-invalid": true }} let:args {template} />
