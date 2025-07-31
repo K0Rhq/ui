@@ -11,6 +11,8 @@ This design language builds on the traditional semantic and flat color token des
 > [!NOTE]
 > For older systems, rendering the shadows might be resource intensive, or maybe the user prefers a flatter interface. So there is a Tailwind variant `flat` that you would apply just like dark mode to change the style.
 
+Figma file: https://www.figma.com/community/file/1532866693398685159/kor-ui
+
 ### Font styles
 
 Our main font style will stay as `sans`, which uses Outfit. But we also have a `serif` font style using Wittgenstein, primarily for reading focused apps.
@@ -58,6 +60,6 @@ To publish to npm, file a pull request into the `main` branch, and we'll review 
 
 ## License & Contributing
 
-Contributions and fixes are welcome! If you're adding a new component, we can make the UI during the PR review. Check with the Figma file to see if the UI is already designed.
+Contributions and fixes are welcome! If you're adding a new component, we can make the UI during the PR review. Check with the [Figma file](https://www.figma.com/community/file/1532866693398685159/kor-ui) to see if the UI is already designed.
 
 Licensed `Apache-2.0`
