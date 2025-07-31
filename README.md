@@ -53,3 +53,11 @@ To remove the link and go back to the npm version:
 pnpm unlink --global @korhq/ui
 pnpm install
 ```
+
+To publish to npm, file a pull request into the `main` branch, and we'll review it, bump the version and publish.
+
+## License & Contributing
+
+Contributions and fixes are welcome! If you're adding a new component, we can make the UI during the PR review. Check with the Figma file to see if the UI is already designed.
+
+Licensed `Apache-2.0`
