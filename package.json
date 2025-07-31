@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "build:ui": "svelte-package && node scripts/generate-exports.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -11,6 +12,82 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "module": "./src/lib/index.ts",
+  "types": "./dist/index.d.ts",
+  "svelte": "./dist/index.js",
+  "exports": {
+    "./tailwind.css": {
+      "default": "./src/tailwind.css"
+    },
+    ".": {
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./button": {
+      "svelte": "./dist/components/ui/button/index.js",
+      "default": "./dist/components/ui/button/index.js",
+      "types": "./dist/components/ui/button/index.d.ts"
+    },
+    "./checkbox": {
+      "svelte": "./dist/components/ui/checkbox/index.js",
+      "default": "./dist/components/ui/checkbox/index.js",
+      "types": "./dist/components/ui/checkbox/index.d.ts"
+    },
+    "./input": {
+      "svelte": "./dist/components/ui/input/index.js",
+      "default": "./dist/components/ui/input/index.js",
+      "types": "./dist/components/ui/input/index.d.ts"
+    },
+    "./label": {
+      "svelte": "./dist/components/ui/label/index.js",
+      "default": "./dist/components/ui/label/index.js",
+      "types": "./dist/components/ui/label/index.d.ts"
+    },
+    "./list-item": {
+      "svelte": "./dist/components/ui/list-item/index.js",
+      "default": "./dist/components/ui/list-item/index.js",
+      "types": "./dist/components/ui/list-item/index.d.ts"
+    },
+    "./radio-group": {
+      "svelte": "./dist/components/ui/radio-group/index.js",
+      "default": "./dist/components/ui/radio-group/index.js",
+      "types": "./dist/components/ui/radio-group/index.d.ts"
+    },
+    "./select": {
+      "svelte": "./dist/components/ui/select/index.js",
+      "default": "./dist/components/ui/select/index.js",
+      "types": "./dist/components/ui/select/index.d.ts"
+    },
+    "./separator": {
+      "svelte": "./dist/components/ui/separator/index.js",
+      "default": "./dist/components/ui/separator/index.js",
+      "types": "./dist/components/ui/separator/index.d.ts"
+    },
+    "./slider": {
+      "svelte": "./dist/components/ui/slider/index.js",
+      "default": "./dist/components/ui/slider/index.js",
+      "types": "./dist/components/ui/slider/index.d.ts"
+    },
+    "./switch": {
+      "svelte": "./dist/components/ui/switch/index.js",
+      "default": "./dist/components/ui/switch/index.js",
+      "types": "./dist/components/ui/switch/index.d.ts"
+    },
+    "./utils": {
+      "svelte": "./dist/utils.js",
+      "default": "./dist/utils.js",
+      "types": "./dist/utils.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src/tailwind.css",
+    "src/lib/**/*"
+  ],
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
     "@internationalized/date": "^3.8.2",
@@ -20,6 +97,7 @@
     "@storybook/addon-svelte-csf": "^5.0.7",
     "@storybook/addon-vitest": "^9.0.18",
     "@storybook/svelte-vite": "^9.0.18",
+    "@sveltejs/package": "^2.4.0",
     "@sveltejs/vite-plugin-svelte": "^6.0.0",
     "@types/node": "^24.1.0",
     "@vitest/browser": "^3.2.4",
@@ -28,7 +106,6 @@
     "phosphor-icons-svelte": "^2.0.9",
     "playwright": "^1.54.1",
     "storybook": "^9.0.18",
-    "svelte": "^5.35.5",
     "svelte-check": "^4.3.0",
     "sveltekit-superforms": "^2.27.1",
     "tailwind-merge": "^3.3.1",
@@ -48,6 +125,7 @@
     "clsx": "^2.1.1",
     "tailwindcss": "^4.1.11",
     "tailwindcss-motion": "^1.1.1",
+    "svelte": "^5.35.5",
     "zod": "^4.0.10"
   }
 }
