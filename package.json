@@ -84,9 +84,8 @@
     }
   },
   "files": [
-    "dist",
-    "src/tailwind.css",
-    "src/lib/**/*"
+    "dist/**/*",
+    "src/tailwind.css"
   ],
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
