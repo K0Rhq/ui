@@ -56,10 +56,10 @@ pnpm unlink --global @korhq/ui
 pnpm install
 ```
 
-To publish to npm, file a pull request into the `main` branch, and we'll review it, bump the version and publish.
+To publish to npm, file a pull request into the `main` branch, and we'll review it, once merged into main it will publish.
 
 ## License & Contributing
 
-Contributions and fixes are welcome! If you're adding a new component, we can make the UI during the PR review. Check with the [Figma file](https://www.figma.com/community/file/1532866693398685159/kor-ui) to see if the UI is already designed.
+Contributions and fixes are welcome! If you're adding a new component, we can make the UI (fix styles, etc) during the PR review. Check with the [Figma file](https://www.figma.com/community/file/1532866693398685159/kor-ui) to see if the UI is already designed.
 
 Licensed `Apache-2.0`
