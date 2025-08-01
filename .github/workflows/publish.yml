@@ -23,7 +23,7 @@ jobs:
           version: latest
       - run: pnpm install
       - run: pnpm build:ui
-      - run: pnpm publish --access public
+      - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: softprops/action-gh-release@v2
