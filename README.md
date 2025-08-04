@@ -4,6 +4,12 @@
 
 KOR UI is a smart, modern, not-boring new design system and UI kit, built for Svelte 5.
 
+## Installation
+
+Run `npm install @korhq/ui`.
+
+Add `@import "@korhq/ui/tailwind.css` to your main Tailwind config file.
+
 ## Design language
 
 This design language builds on the traditional semantic and flat color token design systems, by adding glass and skeuomorphism effects on components and materials via shadows and color blend modes.
