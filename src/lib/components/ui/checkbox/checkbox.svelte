@@ -19,6 +19,7 @@
     class={cn(
         "border-stroke bg-surface-primary shadow-glass text-text-60 data-[state=checked]:text-text data-[state=indeterminate]:text-text peer flex size-7 shrink-0 items-center justify-center rounded-8 border outline-none",
         "transition-[border-color] duration-200 ease-out",
+        "hover:brightness-110 active:brightness-95 active:scale-[98%] duration-200 transform-[filter,scale]",
         "focus-visible:border-text/25 focus-visible:ring-text/15 focus-visible:ring-[2px] ring-offset-background outline-none",
         "aria-invalid:ring-text-danger/20 dark:aria-invalid:ring-text-danger/40 aria-invalid:border-text-danger",
         "disabled:pointer-events-none aria-disabled:cursor-not-allowed disabled:opacity-50 disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:opacity-50",
