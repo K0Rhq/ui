@@ -17,7 +17,7 @@
     const triggerVariants = cva(
         [
             "bg-surface-primary border border-stroke text-text flex items-center gap-2 justify-between shadow-glass",
-            "hover:brightness-110 active:brightness-95 duration-200 transform-[filter]",
+            "hover:brightness-110 active:brightness-95 active:scale-[98%] duration-200 transform-[filter,scale]",
             "focus-visible:border-text/25 focus-visible:ring-text/15 focus-visible:ring-[2px] ring-offset-background outline-none",
             "disabled:pointer-events-none aria-disabled:cursor-not-allowed disabled:opacity-50 disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:opacity-50",
             "aria-invalid:ring-text-danger/20 dark:aria-invalid:ring-text-danger/40 aria-invalid:border-text-danger",
