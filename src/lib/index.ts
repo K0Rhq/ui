@@ -9,6 +9,8 @@ export * as Select from "./components/ui/select/index.js";
 export * as Separator from "./components/ui/separator/index.js";
 export * as Slider from "./components/ui/slider/index.js";
 export * as Switch from "./components/ui/switch/index.js";
+// Brand
+export * as LogoKOR from "./components/brand/logo-kor/index.js";
 
 // Utilities
 export * from "./utils.js";
