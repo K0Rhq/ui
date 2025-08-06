@@ -1,6 +1,6 @@
 <script module>
     import { defineMeta } from "@storybook/addon-svelte-csf";
-    import { LogoKOR } from "$lib/components/ui/brand/index.ts";
+    import { LogoKOR } from "$lib/components/brand/logo-kor/index.ts";
 
     const { Story } = defineMeta({
         title: "Guidelines/Brand",

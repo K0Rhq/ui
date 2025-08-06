@@ -1,4 +1,4 @@
-import Root, { type LogoKORProps } from "./LogoKOR.svelte";
+import Root, { type LogoKORProps } from "./logo-kor.svelte";
 
 export {
   Root,
