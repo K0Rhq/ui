@@ -16,6 +16,7 @@
     data-slot="switch"
     class={cn(
         "bg-surface-primary border border-stroke shadow-glass peer inline-flex h-7 w-12.5 shrink-0 items-center rounded-full outline-none transition-all",
+        "hover:brightness-110 active:brightness-95 active:scale-[98%] duration-200 transform-[filter,scale]",
         "focus-visible:border-text/25 focus-visible:ring-text/15 focus-visible:ring-[2px] ring-offset-background outline-none",
         "aria-invalid:ring-text-danger/20 dark:aria-invalid:ring-text-danger/40 aria-invalid:border-text-danger group",
         "disabled:pointer-events-none aria-disabled:cursor-not-allowed disabled:opacity-50 disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:opacity-50",

@@ -9,7 +9,29 @@ permissions:
   contents: write
 
 jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    outputs:
+      is-main: ${{ steps.check.outputs.is-main }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+      - name: Check if tag is on main branch
+        id: check
+        run: |
+          if git branch -r --contains ${{ github.ref }} | grep -q 'origin/main'; then
+            echo "is-main=true" >> $GITHUB_OUTPUT
+            echo "Tag is on main branch"
+          else
+            echo "is-main=false" >> $GITHUB_OUTPUT
+            echo "Tag is not on main branch, skipping publish"
+          fi
+
   publish:
+    needs: check-branch
+    if: needs.check-branch.outputs.is-main == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

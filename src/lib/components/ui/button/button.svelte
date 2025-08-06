@@ -9,7 +9,7 @@
     export const buttonVariants = tv({
         base: [
             "inline-flex shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-full outline-none body transition-all serif:pt-1",
-            "hover:brightness-110 active:brightness-95 active:pt-1 serif:active:pt-2 duration-200 transform-[filter]",
+            "hover:brightness-110 active:brightness-95 active:scale-[98%] duration-200 transform-[filter,scale]",
             "aria-invalid:ring-[2px] aria-invalid:ring-text-danger/30 aria-invalid:border aria-invalid:border-text-danger",
             "disabled:pointer-events-none aria-disabled:cursor-not-allowed disabled:opacity-50 disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:opacity-50",
             "[&_svg:not([class*='size-'])]:size-4.5 [&_svg]:pointer-events-none [&_svg]:shrink-0 serif:[&_svg]:mb-1",
