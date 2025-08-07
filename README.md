@@ -8,7 +8,12 @@ KOR UI is a smart, modern, not-boring new design system and UI kit, built for Sv
 
 Run `npm install @korhq/ui`.
 
-Add `@import "@korhq/ui/tailwind.css` to your main Tailwind config file.
+Add this to your main Tailwind v4 config file, and make the the `node_modules/@korhq/ui` relative path is correct, so the components can get styled.
+
+```css
+@import "@korhq/ui/tailwind.css";
+@source "../../node_modules/@korhq/ui/dist/components/ui";
+```
 
 ## Design language
 
